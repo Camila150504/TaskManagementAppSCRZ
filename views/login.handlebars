@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <link rel="stylesheet" href="/css/style.css">
+    <main>
+        <div class="form-container">
+            <h1>Log in</h1>
+            <p>Insert your credentials</p>
+            <form id="login-form">
+                <label for="user" class="sr-only">User: </label>
+                <input type="text" name="user" id="user" placeholder="User Name">
+                <label for="password" class="sr-only">Password: </label>
+                <input type="password" name="password" id="password" placeholder="Password">
+                <button type="submit">Login</button>
+                <p class="error hidden">Something happened, try again</p>
+            </form>
+        </div>
+    </main>
+
+    <script src="login.js" defer></script>
+    
+
+</body>
+</html>

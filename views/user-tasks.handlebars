@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>My Tasks</title>
+</head>
+<body>
+  <main>
+    <div class="whole-container">
+      <!-- Header Section -->
+      <div class="header">
+        <h1>Welcome, {{user}}</h1>
+        <button class="logout">Log Out</button>
+      </div>
+
+      <!-- Task Section -->
+      <section class="task-container">
+        {{#if tasks.length}}
+          {{#each tasks}}
+            <div class="task-card {{status}}">
+              <h2>{{title}}</h2>
+              <p><strong>Description:</strong> {{description}}</p>
+              <p><strong>Priority:</strong> <span class="priority {{priority}}">{{priority}}</span></p>
+              <p><strong>Due Date:</strong> {{dueDate}}</p>
+              <p><strong>Status:</strong> <span class="status">{{status}}</span></p>
+
+              <!-- Edit button for each task -->
+              <button class="edit-task" data-id="{{id}}">Edit Task</button>
+            </div>
+          {{/each}}
+        {{else}}
+          <p class="no-tasks">No tasks available.</p>
+        {{/if}}
+      </section>
+
+      <button class="add-task-btn">Add New Task</button>
+    </div>
+  </main>
+
+  <script src="tasks.js" defer></script>
+  <script src="user-tasks.js"></script>
+</body>
+</html>

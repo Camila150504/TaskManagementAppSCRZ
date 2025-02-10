@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Add New Task</title>
+</head>
+<body>
+    <main class="form-container">
+        <h1>Add New Task</h1>
+        <form action="/api/addTasks" method="POST" class="task-form">
+            <!-- Title Input -->
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <!-- Description Input -->
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <!-- Priority Selector -->
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority" required>
+                <option value="High" class="priority High">High</option>
+                <option value="Moderate" class="priority Moderate">Moderate</option>
+                <option value="Low" class="priority Low">Low</option>
+            </select>
+
+            <!-- Due Date (with a Date Picker) -->
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate" required>
+
+            <!-- Submit Button -->
+            <button type="submit" class="add-taskb">Add Task</button>
+        </form>
+
+        <!-- Back to Tasks Button -->
+        <a href="/myTasks" class="back-btn">Back to My Tasks</a>
+    </main>
+
+    <script src="tasks.js" defer></script>
+</body>
+</html>

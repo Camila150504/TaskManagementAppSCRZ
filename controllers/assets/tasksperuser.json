@@ -1,0 +1,138 @@
+[
+    {
+        "user": "Camila1234",
+        "password": "$2a$05$L4kKv4mgT8uW2L/byUI8qO7o3jMY0OIBFnOgVOO6IPKBEX7Ut5QI2",
+        "tasks": [
+            {
+                "id": "1",
+                "title": "Task Manager",
+                "description": "Project for Web 2",
+                "priority": "High",
+                "dueDate": "2025-09-02",
+                "status": "Pending"
+            },
+            {
+                "id": "2",
+                "title": "App",
+                "description": "Project for Mobile",
+                "priority": "Moderate",
+                "dueDate": "2025-09-02",
+                "status": "Completed"
+            },
+            {
+                "id": "3",
+                "title": "App2",
+                "description": "Project for Mobile Prueba",
+                "priority": "Moderate",
+                "dueDate": "2025-09-02",
+                "status": "Pending"
+            },
+            {
+                "id": "4",
+                "title": "lhij",
+                "description": "ihoih",
+                "priority": "High",
+                "dueDate": "2025-02-13",
+                "status": "Pending"
+            },
+            {
+                "id": "5",
+                "title": "lhij",
+                "description": "ihoih",
+                "priority": "High",
+                "dueDate": "2025-02-13",
+                "status": "Pending"
+            },
+            {
+                "id": "6",
+                "title": "Hola1",
+                "description": "prueba",
+                "priority": "High",
+                "dueDate": "2025-02-13",
+                "status": "Pending"
+            },
+            {
+                "id": "7",
+                "title": "prueba2",
+                "description": "holahola",
+                "priority": "High",
+                "dueDate": "2025-02-22",
+                "status": "Pending"
+            },
+            {
+                "id": "8",
+                "title": "prueba2",
+                "description": "holahola",
+                "priority": "High",
+                "dueDate": "2025-02-22",
+                "status": "Pending"
+            },
+            {
+                "id": "9",
+                "title": "pruevldngbnd",
+                "description": "holahola",
+                "priority": "High",
+                "dueDate": "2025-02-22",
+                "status": "Pending"
+            },
+            {
+                "id": "10",
+                "title": "123",
+                "description": "holahola}emremp",
+                "priority": "High",
+                "dueDate": "2025-02-27",
+                "status": "Pending"
+            },
+            {
+                "id": "11",
+                "title": "123mvfvl",
+                "description": "holahola}emremp",
+                "priority": "High",
+                "dueDate": "2025-02-27",
+                "status": "Pending"
+            },
+            {
+                "id": "12",
+                "title": "fpihvpwij`",
+                "description": "pjrpofje",
+                "priority": "High",
+                "dueDate": "2025-02-27",
+                "status": "Pending"
+            },
+            {
+                "id": "13",
+                "title": "Camila1",
+                "description": "jfowifoie",
+                "priority": "High",
+                "dueDate": "2025-02-13",
+                "status": "Pending"
+            },
+            {
+                "id": "14",
+                "title": "Cami",
+                "description": "jfowifoie",
+                "priority": "High",
+                "dueDate": "2025-02-13",
+                "status": "Pending"
+            },
+            {
+                "id": "15",
+                "title": "12",
+                "description": "hool",
+                "priority": "High",
+                "dueDate": "2025-02-21",
+                "status": "Pending"
+            }
+        ]
+    },
+    {
+        "user": "SCRZ",
+        "password": "$2a$05$L4kKv4mgT8uW2L/byUI8qO7o3jMY0OIBFnOgVOO6IPKBEX7Ut5QI2",
+        "tasks": []
+    },
+    {
+        "user": "12345",
+        "password": "$2a$05$m47txvaNmXpc/nsVttKMuu/X136/dIjwiUwWaEfOLUnwYDXBa3BHy",
+        "tasks": []
+    }
+]
