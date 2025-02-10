@@ -5,7 +5,8 @@ import {
   methods as authentication,
   getUserTasks,
   fetchFromFile, 
-  addTask
+  addTask,
+  updateTask
 } from "./controllers/authentication.js";
 import { methods as authorization } from "./middlewares/authorization.js";
 import {getLoggedInUser} from "./controllers/auth.js"
@@ -72,7 +73,7 @@ server.get("/addTask", authorization.onlyAdmin, (req, res, next)=> {
 
 server.post("/api/addTasks", authorization.onlyAdmin, addTask)
 
-server.get("/editTask/:id",  async (req,res, next)=> {
+server.get("/editTask/:id",authorization.onlyAdmin,  async (req,res, next)=> {
   const {id} = req.params;
   const users = await fetchFromFile();
   const loggedUser = getLoggedInUser(req);
@@ -85,6 +86,8 @@ server.get("/editTask/:id",  async (req,res, next)=> {
 
   res.render("edit-task", { task })
 })
+
+server.put("/api/editTask/:id", authorization.onlyAdmin,updateTask)
 
 // 404 
 server.use((req, res, next) => {

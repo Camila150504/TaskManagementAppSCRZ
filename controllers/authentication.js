@@ -228,6 +228,8 @@ export async function addTask(req, res) {
 }
 
 export async function updateTask(req, res){
+
+  console.log("aquí está")
   try {
 
     const user = getLoggedInUser(req);
@@ -244,7 +246,7 @@ export async function updateTask(req, res){
 
     let users = await fetchFromFile();
       const tasks = getUserTasks(users, loggedUser);
-      const task = tasks.find(t => t.id == id)
+      const id = req.params.id;
 
       tasks[id] = {
         ...req.body
@@ -252,7 +254,7 @@ export async function updateTask(req, res){
 
     saveUsers(users);
 
-     return res.status(203).send({
+     return res.status(200).send({
       status: "ok",
       message: "Task updated successfully",
       task: newTask,
@@ -260,7 +262,7 @@ export async function updateTask(req, res){
     });
 
   } catch (error) {
-    console.error("Task addition failed:", error);
+    console.error("Task update failed:", error);
     res.status(500).send({ status: "Error", message: "Internal Server Error" });
   }
 }
