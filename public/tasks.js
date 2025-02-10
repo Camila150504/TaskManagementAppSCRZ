@@ -2,9 +2,6 @@ document.querySelector(".add-task-btn")?.addEventListener("click", ()=>{
     window.location.href = "/addTask";
 })
 
-document.querySelector(".edit-task-btn")?.addEventListener("click", () => {
-  window.location.href = "/editTask/";
-})
 
 document.querySelector(".task-form")?.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -13,7 +10,7 @@ document.querySelector(".task-form")?.addEventListener("submit", async (e) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        //Authorization: `Bearer ${jwtToken}`,
+        ///Authorization: `Bearer ${jwtToken}`,
       },
       body: JSON.stringify({
         title: e.target.elements.title.value,

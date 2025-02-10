@@ -72,10 +72,10 @@ server.get("/addTask", authorization.onlyAdmin, (req, res, next)=> {
 
 server.post("/api/addTasks", authorization.onlyAdmin, addTask)
 
-server.get("/editTask/:id",  (req,res, next)=> {
+server.get("/editTask/:id",  async (req,res, next)=> {
   const {id} = req.params;
-  const users = fetchFromFile();
-  const loggedUser = getLoggedInUser();
+  const users = await fetchFromFile();
+  const loggedUser = getLoggedInUser(req);
   const tasks = getUserTasks(users, loggedUser);
   const task = tasks.find(t => t.id == id)
 

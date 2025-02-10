@@ -227,10 +227,45 @@ export async function addTask(req, res) {
   }
 }
 
+export async function updateTask(req, res){
+  try {
 
-/**
- * Function to save users with updated tasks
- */
+    const user = getLoggedInUser(req);
+
+    if (!user) {
+      return res.status(401).send({ status: "Error", message: "Unauthorized" });
+    }
+
+    const { title, description, priority, dueDate, status } = req.body;
+
+    if (!title || !description || !priority || !dueDate || !status) {
+      return res.status(400).send({ status: "Error", message: "Missing fields" });
+    }
+
+    let users = await fetchFromFile();
+      const tasks = getUserTasks(users, loggedUser);
+      const task = tasks.find(t => t.id == id)
+
+      tasks[id] = {
+        ...req.body
+      };
+
+    saveUsers(users);
+
+     return res.status(203).send({
+      status: "ok",
+      message: "Task updated successfully",
+      task: newTask,
+      redirect: "/myTasks",
+    });
+
+  } catch (error) {
+    console.error("Task addition failed:", error);
+    res.status(500).send({ status: "Error", message: "Internal Server Error" });
+  }
+}
+
+/*
 export function saveUsersToFile(users) {
   try {
     fs.writeFileSync(
@@ -240,7 +275,7 @@ export function saveUsersToFile(users) {
   } catch (error) {
     console.error("Error saving tasks file:", error);
   }
-}
+}*/
 
 export const methods = {
   login,

@@ -7,13 +7,11 @@ export function getLoggedInUser(req) {
       .find((cookie) => cookie.startsWith("jwt="))
       ?.slice(4); 
 
-      console.log(cookieJWT)
-
     if (!cookieJWT) {return null;} 
 
     
-    const decoded = jsonwebtoken.verify(cookieJWT, process.env.JWT_SECRET);
-    return decoded.user; 
+    const {user} = jsonwebtoken.verify(cookieJWT, process.env.JWT_SECRET);
+    return user; 
   } catch (error) {
     console.error("JWT Verification Error:", error);
     return null;
