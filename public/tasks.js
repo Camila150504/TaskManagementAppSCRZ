@@ -1,8 +1,12 @@
-document.querySelector(".add-task-btn").addEventListener("click", ()=>{
+document.querySelector(".add-task-btn")?.addEventListener("click", ()=>{
     window.location.href = "/addTask";
 })
 
-document.querySelector(".task-form").addEventListener("submit", async (e) => {
+document.querySelector(".edit-task-btn")?.addEventListener("click", () => {
+  window.location.href = "/editTask/";
+})
+
+document.querySelector(".task-form")?.addEventListener("submit", async (e) => {
     e.preventDefault();
   
     const res = await fetch("http://localhost:8000/api/addTasks", {
@@ -20,7 +24,6 @@ document.querySelector(".task-form").addEventListener("submit", async (e) => {
     });
   
     const resJson = await res.json();
-    console.log(resJson)
     if (resJson.status === "ok") {
       console.log('se está entrando')
       window.location.href = resJson.redirect;
