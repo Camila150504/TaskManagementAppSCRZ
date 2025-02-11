@@ -245,19 +245,19 @@ export async function updateTask(req, res){
     }
 
     let users = await fetchFromFile();
-      const tasks = getUserTasks(users, loggedUser);
+      const tasks = getUserTasks(users, user);
       const id = req.params.id;
-
-      tasks[id] = {
-        ...req.body
-      };
+      const oldTask = tasks.find(t => t.id == req.params.id)
+      const updatedTask = {...oldTask, ...req.body}
+      Object.assign(oldTask, updatedTask)
 
     saveUsers(users);
+    console.log("Task updated")
 
      return res.status(200).send({
       status: "ok",
       message: "Task updated successfully",
-      task: newTask,
+      task:updatedTask,
       redirect: "/myTasks",
     });
 

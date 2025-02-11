@@ -174,5 +174,67 @@
         "user": "12345",
         "password": "$2a$05$m47txvaNmXpc/nsVttKMuu/X136/dIjwiUwWaEfOLUnwYDXBa3BHy",
         "tasks": []
+    },
+    {
+        "user": "felix",
+        "password": "$2a$05$YUW6.bIrNAYBsZb3XchsAO.NSXLqoUIEI2kPpS72yDqgF6X/aZEue",
+        "tasks": [
+            {
+                "id": "1",
+                "title": "Test",
+                "description": "This is my test",
+                "priority": "Moderate",
+                "dueDate": "2025-02-11",
+                "status": "Pending"
+            },
+            {
+                "id": "2",
+                "title": "Test",
+                "description": "Hello, I am working with HTML tables. Nothing is gonna stop us now.",
+                "priority": "Moderate",
+                "dueDate": "2025-02-11",
+                "status": "Pending"
+            },
+            {
+                "id": "4",
+                "title": "Another",
+                "description": "Past Due",
+                "priority": "High",
+                "dueDate": "2025-02-07",
+                "status": "Pending"
+            },
+            {
+                "id": "5",
+                "title": "Another",
+                "description": "Past Due",
+                "priority": "High",
+                "dueDate": "2025-02-07",
+                "status": "Pending"
+            },
+            {
+                "id": "6",
+                "title": "Another",
+                "description": "Past Due",
+                "priority": "High",
+                "dueDate": "2025-02-07",
+                "status": "Pending"
+            },
+            {
+                "id": "7",
+                "title": "Another",
+                "description": "Past Due",
+                "priority": "High",
+                "dueDate": "2025-02-07",
+                "status": "Pending"
+            },
+            {
+                "id": "8",
+                "title": "Another",
+                "description": "Past Due",
+                "priority": "High",
+                "dueDate": "2025-02-07",
+                "status": "Pending"
+            }
+        ]
     }
 ]

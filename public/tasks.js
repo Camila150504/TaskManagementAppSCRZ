@@ -4,7 +4,7 @@ document.querySelector(".add-task-btn")?.addEventListener("click", ()=>{
 
 
 
-document.querySelector(".edit-task")?.addEventListener("submit", async (e) => {
+document.querySelector(".edit-task-form")?.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const pathSegments = window.location.pathname.split("/"); 
